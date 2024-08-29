@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Application</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <h1>My vue application</h1>
+    <div id="app">
+        <table>
+            <thead>
+                <th>Book Title</th>
+                <th>Book Description</th>
+                <th>Author</th>
+                <th>Age</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{description}}</td>
+                    <td>{{author}}</td>
+                    <td>{{age}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <hr>
+        <br>
+
+
+        <button @click="addAge">Increase Age</button>
+        <button @click="subAge">Decrease Age</button>
+        <button @click="updateTitle~">Update Title</button>
+
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+</html>
