@@ -21,6 +21,9 @@ const app = Vue.createApp({
         toggleData(){
             this.showData = !this.showData;
         },
+        handleEvent(){
+            console.log("event")
+        }
     },
 });
 

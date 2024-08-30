@@ -4,36 +4,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Application</title>
     <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .box {
+            background-color: rgb(197, 194, 194);
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
+
 <body>
     <h1>My vue application</h1>
     <div id="app">
-        <table v-show="showData">
-            <thead>
-                <th>Book Title</th>
-                <th>Book Description</th>
-                <th>Author</th>
-                <th>Age</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{title}}</td>
-                    <td>{{description}}</td>
-                    <td>{{author}}</td>
-                    <td>{{age}}</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <hr>
-        <br>
+        <div>
+            <table v-show="showData">
+                <thead>
+                    <th>Book Title</th>
+                    <th>Book Description</th>
+                    <th>Author</th>
+                    <th>Age</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{title}}</td>
+                        <td>{{description}}</td>
+                        <td>{{author}}</td>
+                        <td>{{age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <hr>
+            <br>
+
+            <div>
+                <button @click="toggleData">
+                    <span v-if="!showData">Show Data</span>
+                    <span v-else>Hide Data</span>
+                </button>
+            </div>
+        </div>
 
         <div>
-            <button @click="toggleData">
-                <span v-if="!showData">Show Data</span>
-                <span v-else>Hide Data</span>
-            </button>
+            <span class="box" @mouseover="handleEvent"> Mouse Over (enter) </span>
+            <span class="box" @mouseleave="handleEvent" > Mouse Leave</span>
+            <span class="box" @dblclick="handleEvent"> Double Click </span>
+            <span class="box"> </span>
         </div>
+
 
     </div>
 
