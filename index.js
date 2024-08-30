@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return{
+            showData: true,
             title: "Shereds for Sell",
             description: "Shereds for Sell.............",
             author: 'John Doe',
@@ -16,6 +17,9 @@ const app = Vue.createApp({
         },
         updateTitle(){
             this.title = "Shereds of tenderness";
+        },
+        toggleData(){
+            this.showData = !this.showData;
         },
     },
 });
