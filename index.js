@@ -5,7 +5,9 @@ const app = Vue.createApp({
             title: "Shereds for Sell",
             description: "Shereds for Sell.............",
             author: 'John Doe',
-            age: 34
+            age: 34,
+            x: 0,
+            y: 0,
         }
     },
     methods: {
@@ -21,9 +23,15 @@ const app = Vue.createApp({
         toggleData(){
             this.showData = !this.showData;
         },
-        handleEvent(){
-            console.log("event")
+        handleEvent(e,data){
+            console.log(data)
+            console.log(e)
+        },
+        handleMouseMove(e){
+            this.x =  e.offsetX,
+            this.y = e.offsetY
         }
+
     },
 });
 

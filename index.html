@@ -49,10 +49,10 @@
         </div>
 
         <div>
-            <span class="box" @mouseover="handleEvent"> Mouse Over (enter) </span>
-            <span class="box" @mouseleave="handleEvent" > Mouse Leave</span>
-            <span class="box" @dblclick="handleEvent"> Double Click </span>
-            <span class="box"> </span>
+            <span class="box" @mouseover="handleEvent($event,'mouseover')"> Mouse Over (enter) </span>
+            <span class="box" @mouseleave="handleEvent($event,'mouseleave')" > Mouse Leave</span>
+            <span class="box" @dblclick="handleEvent($event,'dblclick')"> Double Click </span>
+            <span class="box" @mousemove="handleMouseMove" >Position -  {{x}},{{y}} </span>
         </div>
 
 
