@@ -55,6 +55,15 @@
             <span class="box" @mousemove="handleMouseMove" >Position -  {{x}},{{y}} </span>
         </div>
 
+        <hr><br>
+
+        <div style="display: flex; flex-wrap: ;">
+            <div v-for="book in books">
+                <img :src="book.img" :alt="book.title">
+                <h3>Title: {{book.title}}</h3>
+                <p>Author: {{book.author}}</p>
+            </div>
+        </div>
 
     </div>
 
