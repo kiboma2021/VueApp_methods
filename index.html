@@ -13,6 +13,9 @@
             margin: 20px;
             display: inline-block;
         }
+        .fav {
+            background-color: yellow;
+        }
     </style>
 </head>
 
@@ -57,8 +60,8 @@
 
         <hr><br>
 
-        <div style="display: flex; flex-wrap: ;">
-            <div v-for="book in books">
+        <div>
+            <div v-for="book in books" style="display: flex; justify-content: space-around; margin-bottom: 2rem; padding: 1rem; align-items: center;" :class="{ fav: book.isFav}" @click="toogleFav(book)">
                 <img :src="book.img" :alt="book.title">
                 <h3>Title: {{book.title}}</h3>
                 <p>Author: {{book.author}}</p>
